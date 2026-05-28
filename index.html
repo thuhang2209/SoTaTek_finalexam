@@ -1,177 +1,243 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SoTa Shop - Ecommerce</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/style.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="#">SoTa<span>Shop</span></a>
-      <nav class="menu">
-        <a href="#">Trang chủ</a>
-        <a href="#">Sản phẩm</a>
-        <a href="#">Khuyến mãi</a>
-        <a href="#">Liên hệ</a>
-      </nav>
-      <div class="actions">
-        <a href="#" class="btn btn-light">Đăng nhập</a>
-        <a href="#checkout" id="cartButton" class="btn btn-primary">Giỏ hàng (<span id="cartCount">0</span>)</a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container hero-content">
-        <div class="hero-text">
-          <p class="eyebrow">Bộ sưu tập mới 2026</p>
-          <h1>Mua sắm thông minh, giá tốt mỗi ngày</h1>
-          <p class="subtitle">
-            Khám phá hàng ngàn sản phẩm chất lượng với ưu đãi hấp dẫn.
-            Miễn phí giao hàng cho đơn từ 499.000đ.
-          </p>
-          <div class="hero-cta">
-            <a href="#" class="btn btn-primary">Mua ngay</a>
-            <a href="#" class="btn btn-outline">Xem bộ sưu tập</a>
-          </div>
-        </div>
-        <div class="hero-card">
-          <h3>Deal hôm nay</h3>
-          <p>Tai nghe Bluetooth Pro X2</p>
-          <div class="price">
-            <span class="new">799.000đ</span>
-            <span class="old">1.199.000đ</span>
-          </div>
-          <button class="btn btn-primary full add-to-cart" data-id="deal-x2" data-name="Tai nghe Bluetooth Pro X2" data-price="799000">Thêm vào giỏ</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoTa Shop - Ecommerce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="#">SoTa<span>Shop</span></a>
+        <nav class="menu">
+          <a href="#">Trang chủ</a>
+          <a href="#">Sản phẩm</a>
+          <a href="#">Khuyến mãi</a>
+          <a href="#">Liên hệ</a>
+        </nav>
+        <div class="actions">
+          <a href="#" class="btn btn-light">Đăng nhập</a>
+          <a href="#checkout" id="cartButton" class="btn btn-primary"
+            >Giỏ hàng (<span id="cartCount">0</span>)</a
+          >
         </div>
       </div>
-    </section>
+    </header>
 
-    <section class="section container">
-      <div class="section-head">
-        <h2>Danh mục nổi bật</h2>
-        <a href="#">Xem tất cả</a>
-      </div>
-      <div class="categories">
-        <article class="category-item">Thời trang</article>
-        <article class="category-item">Điện tử</article>
-        <article class="category-item">Gia dụng</article>
-        <article class="category-item">Mỹ phẩm</article>
-      </div>
-    </section>
-
-    <section class="section container">
-      <div class="section-head">
-        <h2>Sản phẩm bán chạy</h2>
-        <a href="#">Xem thêm</a>
-      </div>
-      <div class="products">
-        <article class="product-card">
-          <div class="product-image">Ảnh sản phẩm</div>
-          <h3>Áo khoác thể thao</h3>
-          <p>Phong cách năng động, chất liệu thoáng khí.</p>
-          <div class="price-row">
-            <span class="product-price">459.000đ</span>
-            <button class="btn btn-outline small add-to-cart" data-id="ao-khoac-the-thao" data-name="Áo khoác thể thao" data-price="459000">Thêm giỏ</button>
+    <main>
+      <section class="hero">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <p class="eyebrow">Bộ sưu tập mới 2026</p>
+            <h1>Mua sắm thông minh, giá tốt mỗi ngày</h1>
+            <p class="subtitle">
+              Khám phá hàng ngàn sản phẩm chất lượng với ưu đãi hấp dẫn. Miễn
+              phí giao hàng cho đơn từ 499.000đ.
+            </p>
+            <div class="hero-cta">
+              <a href="#" class="btn btn-primary">Mua ngay</a>
+              <a href="#" class="btn btn-outline">Xem bộ sưu tập</a>
+            </div>
           </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-image">Ảnh sản phẩm</div>
-          <h3>Đồng hồ thông minh S9</h3>
-          <p>Theo dõi sức khỏe và kết nối nhanh chóng.</p>
-          <div class="price-row">
-            <span class="product-price">1.990.000đ</span>
-            <button class="btn btn-outline small add-to-cart" data-id="dong-ho-s9" data-name="Đồng hồ thông minh S9" data-price="1990000">Thêm giỏ</button>
+          <div class="hero-card">
+            <h3>Deal hôm nay</h3>
+            <p>Tai nghe Bluetooth Pro X2</p>
+            <div class="price">
+              <span class="new">799.000đ</span>
+              <span class="old">1.199.000đ</span>
+            </div>
+            <button
+              class="btn btn-primary full add-to-cart"
+              data-id="deal-x2"
+              data-name="Tai nghe Bluetooth Pro X2"
+              data-price="799000"
+            >
+              Thêm vào giỏ
+            </button>
           </div>
-        </article>
+        </div>
+      </section>
 
-        <article class="product-card">
-          <div class="product-image">Ảnh sản phẩm</div>
-          <h3>Máy xay mini</h3>
-          <p>Thiết kế nhỏ gọn, tiện lợi cho gia đình.</p>
-          <div class="price-row">
-            <span class="product-price">699.000đ</span>
-            <button class="btn btn-outline small add-to-cart" data-id="may-xay-mini" data-name="Máy xay mini" data-price="699000">Thêm giỏ</button>
+      <section class="section container">
+        <div class="section-head">
+          <h2>Danh mục nổi bật</h2>
+          <a href="#">Xem tất cả</a>
+        </div>
+        <div class="categories">
+          <article class="category-item">Thời trang</article>
+          <article class="category-item">Điện tử</article>
+          <article class="category-item">Gia dụng</article>
+          <article class="category-item">Mỹ phẩm</article>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-head">
+          <h2>Sản phẩm bán chạy</h2>
+          <a href="#">Xem thêm</a>
+        </div>
+        <div class="products">
+          <article class="product-card">
+            <div class="product-image">
+              <img
+                src="https://th.bing.com/th/id/OIP._8qw3rv9uy9YQAyqm1ip7AHaEh?w=300&h=183&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+                alt="Ảnh sản phẩm"
+                class="product-img"
+              />
+            </div>
+            <h3>Áo khoác thể thao</h3>
+            <p>Phong cách năng động, chất liệu thoáng khí.</p>
+            <div class="price-row">
+              <span class="product-price">459.000đ</span>
+              <button
+                class="btn btn-outline small add-to-cart"
+                data-id="ao-khoac-the-thao"
+                data-name="Áo khoác thể thao"
+                data-price="459000"
+              >
+                Thêm giỏ
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image">
+              <img
+                src="https://th.bing.com/th/id/OIP.Ul5HqSOHSHh0XjIConKzMwHaEl?w=244&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+                alt="Đồng hồ thông minh S9"
+                class="product-img"
+              />
+            </div>
+            <h3>Đồng hồ thông minh </h3>
+            <p>Theo dõi sức khỏe và kết nối nhanh chóng.</p>
+            <div class="price-row">
+              <span class="product-price">1.990.000đ</span>
+              <button
+                class="btn btn-outline small add-to-cart"
+                data-id="dong-ho-s9"
+                data-name="Đồng hồ thông minh S9"
+                data-price="1990000"
+              >
+                Thêm giỏ
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image">
+              <img
+                src="https://th.bing.com/th/id/OIP.H_gS67VS3BJ1ApqFTp8wuAHaE7?w=280&h=186&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+                alt="Máy xay mini"
+                class="product-img"
+              />
+            </div>
+            <h3>Máy xay mini</h3>
+            <p>Thiết kế nhỏ gọn, tiện lợi cho gia đình.</p>
+            <div class="price-row">
+              <span class="product-price">699.000đ</span>
+              <button
+                class="btn btn-outline small add-to-cart"
+                data-id="may-xay-mini"
+                data-name="Máy xay mini"
+                data-price="699000"
+              >
+                Thêm giỏ
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image">
+              <img
+                src="data:image/webp;base64,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"
+                alt="Son lì Velvet"
+                class="product-img"
+              />
+            </div>
+            <h3>Son lì Velvet</h3>
+            <p>Màu chuẩn, bền đẹp suốt nhiều giờ.</p>
+            <div class="price-row">
+              <span class="product-price">289.000đ</span>
+              <button
+                class="btn btn-outline small add-to-cart"
+                data-id="son-li-velvet"
+                data-name="Son lì Velvet"
+                data-price="289000"
+              >
+                Thêm giỏ
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container checkout-section" id="checkout">
+        <div class="section-head">
+          <h2>Checkout</h2>
+        </div>
+        <div class="checkout-grid">
+          <div class="checkout-card">
+            <h3>Đơn hàng của bạn</h3>
+            <ul id="checkoutItems" class="checkout-items">
+              <li class="muted">Chưa có sản phẩm trong giỏ.</li>
+            </ul>
+            <div class="checkout-total">
+              <span>Tạm tính</span>
+              <strong id="checkoutTotal">0đ</strong>
+            </div>
           </div>
-        </article>
 
-        <article class="product-card">
-          <div class="product-image">Ảnh sản phẩm</div>
-          <h3>Son lì Velvet</h3>
-          <p>Màu chuẩn, bền đẹp suốt nhiều giờ.</p>
-          <div class="price-row">
-            <span class="product-price">289.000đ</span>
-            <button class="btn btn-outline small add-to-cart" data-id="son-li-velvet" data-name="Son lì Velvet" data-price="289000">Thêm giỏ</button>
-          </div>
-        </article>
-      </div>
-    </section>
+          <form id="checkoutForm" class="checkout-card checkout-form">
+            <h3>Thông tin nhận hàng</h3>
+            <label for="fullName">Họ và tên</label>
+            <input id="fullName" name="fullName" type="text" required />
 
-    <section class="section container checkout-section" id="checkout">
-      <div class="section-head">
-        <h2>Checkout</h2>
-      </div>
-      <div class="checkout-grid">
-        <div class="checkout-card">
-          <h3>Đơn hàng của bạn</h3>
-          <ul id="checkoutItems" class="checkout-items">
-            <li class="muted">Chưa có sản phẩm trong giỏ.</li>
+            <label for="phone">Số điện thoại</label>
+            <input id="phone" name="phone" type="tel" required />
+
+            <label for="address">Địa chỉ giao hàng</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+
+            <button type="submit" class="btn btn-primary full">
+              Xác nhận đặt hàng
+            </button>
+            <p id="checkoutMessage" class="checkout-message"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div>
+          <h4>SoTaShop</h4>
+          <p>Nền tảng mua sắm online tiện lợi, nhanh chóng và uy tín.</p>
+        </div>
+        <div>
+          <h4>Hỗ trợ</h4>
+          <ul>
+            <li><a href="#">Chính sách đổi trả</a></li>
+            <li><a href="#">Vận chuyển</a></li>
+            <li><a href="#">Câu hỏi thường gặp</a></li>
           </ul>
-          <div class="checkout-total">
-            <span>Tạm tính</span>
-            <strong id="checkoutTotal">0đ</strong>
-          </div>
         </div>
-
-        <form id="checkoutForm" class="checkout-card checkout-form">
-          <h3>Thông tin nhận hàng</h3>
-          <label for="fullName">Họ và tên</label>
-          <input id="fullName" name="fullName" type="text" required>
-
-          <label for="phone">Số điện thoại</label>
-          <input id="phone" name="phone" type="tel" required>
-
-          <label for="address">Địa chỉ giao hàng</label>
-          <textarea id="address" name="address" rows="3" required></textarea>
-
-          <button type="submit" class="btn btn-primary full">Xác nhận đặt hàng</button>
-          <p id="checkoutMessage" class="checkout-message"></p>
-        </form>
+        <div>
+          <h4>Liên hệ</h4>
+          <ul>
+            <li>Email: support@sotashop.vn</li>
+            <li>Hotline: 1900 1234</li>
+            <li>TP. Hồ Chí Minh, Việt Nam</li>
+          </ul>
+        </div>
       </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <div>
-        <h4>SoTaShop</h4>
-        <p>Nền tảng mua sắm online tiện lợi, nhanh chóng và uy tín.</p>
-      </div>
-      <div>
-        <h4>Hỗ trợ</h4>
-        <ul>
-          <li><a href="#">Chính sách đổi trả</a></li>
-          <li><a href="#">Vận chuyển</a></li>
-          <li><a href="#">Câu hỏi thường gặp</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Liên hệ</h4>
-        <ul>
-          <li>Email: support@sotashop.vn</li>
-          <li>Hotline: 1900 1234</li>
-          <li>TP. Hồ Chí Minh, Việt Nam</li>
-        </ul>
-      </div>
-    </div>
-  </footer>
-  <script src="scripts/index.js"></script>
-</body>
+    </footer>
+    <script src="scripts/index.js"></script>
+  </body>
 </html>

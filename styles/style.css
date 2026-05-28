@@ -239,6 +239,13 @@ a {
   margin-bottom: 64px;
 }
 
+.product-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
 .checkout-section {
   margin-bottom: 64px;
 }
@@ -350,6 +357,7 @@ a {
   place-items: center;
   color: var(--muted);
   font-size: 0.95rem;
+  overflow: hidden;
 }
 
 .product-card h3 {
