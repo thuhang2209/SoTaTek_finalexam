@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
   <header class="site-header">
@@ -21,7 +21,7 @@
       </nav>
       <div class="actions">
         <a href="#" class="btn btn-light">Đăng nhập</a>
-        <a href="#" class="btn btn-primary">Giỏ hàng (0)</a>
+        <a href="#checkout" id="cartButton" class="btn btn-primary">Giỏ hàng (<span id="cartCount">0</span>)</a>
       </div>
     </div>
   </header>
@@ -48,7 +48,7 @@
             <span class="new">799.000đ</span>
             <span class="old">1.199.000đ</span>
           </div>
-          <a href="#" class="btn btn-primary full">Thêm vào giỏ</a>
+          <button class="btn btn-primary full add-to-cart" data-id="deal-x2" data-name="Tai nghe Bluetooth Pro X2" data-price="799000">Thêm vào giỏ</button>
         </div>
       </div>
     </section>
@@ -78,7 +78,7 @@
           <p>Phong cách năng động, chất liệu thoáng khí.</p>
           <div class="price-row">
             <span class="product-price">459.000đ</span>
-            <a href="#" class="btn btn-outline small">Chi tiết</a>
+            <button class="btn btn-outline small add-to-cart" data-id="ao-khoac-the-thao" data-name="Áo khoác thể thao" data-price="459000">Thêm giỏ</button>
           </div>
         </article>
 
@@ -88,7 +88,7 @@
           <p>Theo dõi sức khỏe và kết nối nhanh chóng.</p>
           <div class="price-row">
             <span class="product-price">1.990.000đ</span>
-            <a href="#" class="btn btn-outline small">Chi tiết</a>
+            <button class="btn btn-outline small add-to-cart" data-id="dong-ho-s9" data-name="Đồng hồ thông minh S9" data-price="1990000">Thêm giỏ</button>
           </div>
         </article>
 
@@ -98,7 +98,7 @@
           <p>Thiết kế nhỏ gọn, tiện lợi cho gia đình.</p>
           <div class="price-row">
             <span class="product-price">699.000đ</span>
-            <a href="#" class="btn btn-outline small">Chi tiết</a>
+            <button class="btn btn-outline small add-to-cart" data-id="may-xay-mini" data-name="Máy xay mini" data-price="699000">Thêm giỏ</button>
           </div>
         </article>
 
@@ -108,9 +108,42 @@
           <p>Màu chuẩn, bền đẹp suốt nhiều giờ.</p>
           <div class="price-row">
             <span class="product-price">289.000đ</span>
-            <a href="#" class="btn btn-outline small">Chi tiết</a>
+            <button class="btn btn-outline small add-to-cart" data-id="son-li-velvet" data-name="Son lì Velvet" data-price="289000">Thêm giỏ</button>
           </div>
         </article>
+      </div>
+    </section>
+
+    <section class="section container checkout-section" id="checkout">
+      <div class="section-head">
+        <h2>Checkout</h2>
+      </div>
+      <div class="checkout-grid">
+        <div class="checkout-card">
+          <h3>Đơn hàng của bạn</h3>
+          <ul id="checkoutItems" class="checkout-items">
+            <li class="muted">Chưa có sản phẩm trong giỏ.</li>
+          </ul>
+          <div class="checkout-total">
+            <span>Tạm tính</span>
+            <strong id="checkoutTotal">0đ</strong>
+          </div>
+        </div>
+
+        <form id="checkoutForm" class="checkout-card checkout-form">
+          <h3>Thông tin nhận hàng</h3>
+          <label for="fullName">Họ và tên</label>
+          <input id="fullName" name="fullName" type="text" required>
+
+          <label for="phone">Số điện thoại</label>
+          <input id="phone" name="phone" type="tel" required>
+
+          <label for="address">Địa chỉ giao hàng</label>
+          <textarea id="address" name="address" rows="3" required></textarea>
+
+          <button type="submit" class="btn btn-primary full">Xác nhận đặt hàng</button>
+          <p id="checkoutMessage" class="checkout-message"></p>
+        </form>
       </div>
     </section>
   </main>
@@ -139,5 +172,6 @@
       </div>
     </div>
   </footer>
+  <script src="scripts/index.js"></script>
 </body>
 </html>
